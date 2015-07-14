@@ -1,5 +1,17 @@
 class MoviesController < ApplicationController
 
+  def new
+    logger.debug Movie.count.to_s
+  end
+
+  def create
+    movie = Movie.new
+    movie.title = params["title"]
+    movie.year = params["year"]
+    movie.save
+    redirect_to root_url # "/"
+  end
+
   def index
     @movies = Movie.all
   end
