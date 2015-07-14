@@ -1,0 +1,22 @@
+Movie
+  omdb_key: string
+  title: string
+  year: integer
+
+
+  # Example table for a typical Book model.
+  #
+  # Book
+  #   title: string
+  #   price: integer
+  #   author: string
+  #   summary: text
+  #   hardcover: boolean
+  #
+  # Indent consistently!  Follow the above syntax exactly.
+  # Typical column choices are: string, text, integer, boolean, date, and datetime.
+  #
+  # Default column values can be specified like this:
+  #    price: integer(0)
+  #
+  # Have fun!
