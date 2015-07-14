@@ -4,12 +4,6 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
-  def create
-    # TO DO: create a new Movie row in the database
-    
-    redirect_to "/movies"
-  end
-
   def destroy
     @movie = Movie.find_by(:id => params["id"])
     @movie.delete
