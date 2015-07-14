@@ -13,6 +13,11 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "directors", force: true do |t|
+    t.string "name"
+    t.string "poster_url"
+  end
+
   create_table "movies", force: true do |t|
     t.string  "omdb_key"
     t.string  "title"

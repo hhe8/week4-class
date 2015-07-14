@@ -1,3 +1,7 @@
+Director
+  name: string
+  poster_url: string
+
 Movie
   omdb_key: string
   title: string
