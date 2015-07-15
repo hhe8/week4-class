@@ -1,6 +1,6 @@
 <h1>Add a New Movie</h1>
 
-<form action="/movies/create">
+<%= form_tag "/movies" do %>
   <div>
     <label>Movie Title:</label>
     <input type="text" name="title">
@@ -17,13 +17,6 @@
     <% end %>
   </select>
 
-
-
-
-
-
-
-
   <input type="submit" value="Add Movie">
 
-</form>
+<% end %>

@@ -15,15 +15,18 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= link_to movie.title, "/movies/#{movie.id}" %></td>
-        <% logger.debug "Currently processing movie #{movie.id}" %>
+        <td>
+          <%= link_to movie.title, "/movies/#{movie.id}" %>
+          <%= link_to "(edit)", "/movies/#{movie.id}/edit" %>
+        </td>
         <td>
           <% if movie.director_id != nil %>
             <%= link_to Director.find_by(:id => movie.director_id).name, "/directors/#{movie.director_id}" %>
           <% end %>
         </td>
         <td><%= movie.year %></td>
-        <td><%= link_to "Delete", "/movies/#{movie.id}/delete" %></td>
+
+        <td><%= link_to "Delete", "/movies/#{movie.id}", :method => "delete" %></td>
       </tr>
     <% end %>
   </tbody>
