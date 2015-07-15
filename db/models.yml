@@ -6,7 +6,7 @@ Movie
   omdb_key: string
   title: string
   year: integer
-
+  director_id: integer
 
   # Example table for a typical Book model.
   #

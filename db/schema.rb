@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "omdb_key"
     t.string  "title"
     t.integer "year"
+    t.integer "director_id"
   end
+
+  add_index "movies", ["director_id"], name: "index_movies_on_director_id"
 
 end
