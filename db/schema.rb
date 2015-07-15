@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "directors", force: true do |t|
     t.string "name"
     t.string "poster_url"
@@ -25,6 +28,6 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "director_id"
   end
 
-  add_index "movies", ["director_id"], name: "index_movies_on_director_id"
+  add_index "movies", ["director_id"], name: "index_movies_on_director_id", using: :btree
 
 end
