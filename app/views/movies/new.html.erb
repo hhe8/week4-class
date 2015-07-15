@@ -11,6 +11,19 @@
     <input type="text" name="year">
   </div>
 
+  <select name="director_id">
+    <% Director.all.each do |d| %>
+      <option value="<%= d.id %>"><%= d.name %></option>
+    <% end %>
+  </select>
+
+
+
+
+
+
+
+
   <input type="submit" value="Add Movie">
 
 </form>
